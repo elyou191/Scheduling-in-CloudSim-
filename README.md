@@ -1,1 +1,1 @@
-# Scheduling-in-CloudSim-
+# Scheduling in CloudSim

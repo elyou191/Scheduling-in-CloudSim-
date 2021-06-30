@@ -119,8 +119,8 @@ def run():
 		# file_name = 'MaxMin.java'
 		# compile_java(file_name,"C:\\Users\Youssef\eclipse-workspace1\cloudsim-3.0.3","cloudsim-3.0.3.jar")
 		# execute_java(file_name,input_data,"C:\\Users\Youssef\eclipse-workspace1\cloudsim-3.0.3","cloudsim-3.0.3.jar",tab4,"ACO")
-		# #PSO
-		# file_name = 'MaxMin.java'
+		#PSO
+		# file_name = 'PSO_Scheduler.java'
 		# compile_java(file_name,"C:\\Users\Youssef\eclipse-workspace1\cloudsim-3.0.3","cloudsim-3.0.3.jar")
 		# execute_java(file_name,input_data,"C:\\Users\Youssef\eclipse-workspace1\cloudsim-3.0.3","cloudsim-3.0.3.jar",tab5,"PSO")
 		
@@ -198,9 +198,10 @@ def save_file():
 def showPlot():
 	global a,b
 	win1=tk.Tk()
-	fig = Figure(figsize=(6,3), dpi=96)
+	bars=["SJF","FCFS","MaxMin"]
+	fig = Figure(figsize=(4,6), dpi=80)
 	p = fig.add_subplot(111)
-	p.bar(["SJF","FCFS","MaxMin"],a)
+	p.bar(bars,a)
 	graph = FigureCanvasTkAgg(fig, master=win1)
 	canvas = graph.get_tk_widget()
 	canvas.grid(row=1, column=1)
@@ -265,8 +266,6 @@ tabControl.add(tab3, text ='MaxMin')
 # tabControl.add(tab4, text ='ACO')
 # tabControl.add(tab5, text ='PSO')
 tabControl.add(tab6, text ='Comparaison Table')
-
-
 
 
 tabControl.pack(expand = 1, fill ="both")
